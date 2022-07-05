@@ -136,10 +136,11 @@ function limpiar() {//FUNCION LIMPIAR
 
 function buscarPaciente() {//FUNCION BUSCAR PACIENTE
     let nombre = document.getElementById("buscador").value.toUpperCase();// OBTENEMOS EL VALOR DEL INPUT NOMBRE
-    let encontrado = false;//DECLARAMOS UNA VARIABLE DE BOOLEANO
-    for (let i = 0; i < localStorage.length; i++) {//CICLO PARA RECORRER EL LOCALSTORAGE
-        let paciente = JSON.parse(localStorage.getItem("pacientes"));//OBTENEMOS EL PACIENTE DE LA LISTA
-        if (paciente.nombre == nombre) {//CONDICIONAL PARA BUSCAR EL PACIENTE
+    let pacientes = JSON.parse(localStorage.getItem("pacientes"));// OBTENEMOS LA LISTA DE PACIENTES
+    let encontrado = false;//DECLARAMOS UNA VARIABLE PARA SABER SI ENCONTRAMOS EL PACIENTE
+    for (let i = 0; i < pacientes.length; i++) {//CICLO PARA RECORRER LA LISTA DE PACIENTES
+        if (pacientes[i].nombre == nombre) {//CONDICIONAL PARA SABER SI ENCONTRAMOS EL PACIENTE
+            encontrado = true;//SI ENCONTRAMOS EL PACIENTE CAMBIAMOS EL VALOR DE LA VARIABLE A TRUE
             encontrado = true;//CAMBIAMOS EL VALOR DE LA VARIABLE DE BOOLEANO
             resultadoBusqueda = document.createElement("div");//CREAMOS UN NUEVO DIV
             resultadoBusqueda.innerHTML = `
