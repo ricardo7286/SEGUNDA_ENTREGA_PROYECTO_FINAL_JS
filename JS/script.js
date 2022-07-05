@@ -15,7 +15,7 @@ class paciente {//CLASE PACIENTE
   }
 }
 const pacientes = [];
-alert("Hola Soy Ricardo Hernandez y este es mi Segundo Desafio Entregable de JavaScript");
+alert("Hola Soy Ricardo Hernandez y este es mi Segunda Entrega del Proyecto Final JavaScript");
   
 alert("Bienvenido al Sistema de Atencion Integral de Pacientes");
 
